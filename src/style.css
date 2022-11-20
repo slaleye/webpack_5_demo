@@ -1,5 +1,16 @@
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
 .greeting {
-    font-size: 2rem;
-    text-align: center;
-    color:darkcyan;
+  font-size: 2rem;
+  text-align: center;
+  color: darkcyan;
+}
+
+.image {
+  height: 100px;
+  width: auto;
+  align-self: center;
 }

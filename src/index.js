@@ -1,14 +1,25 @@
 import _ from "lodash";
 import "./style.css";
+import WebpackLogo from "./img/logo-on-white-bg.png";
 
 function MyComponent() {
   console.log("Hi from MyComponent");
-  const element = document.createElement("div");
+  const rootEl = document.createElement("div");
+  rootEl.setAttribute("id", "root");
 
   // Lodash now importeds by this script
-  element.innerHTML = _.join(["Hello", "there", "webpack!"], " ");
-  element.classList.add("greeting");
-  return element;
+  const textEl = document.createElement("p");
+  textEl.innerHTML = _.join(["Hello", "there", "webpack!"], " ");
+  textEl.classList.add("greeting");
+
+  const myImage = new Image();
+  myImage.src = WebpackLogo;
+  myImage.classList.add("image");
+
+  rootEl.appendChild(textEl);
+  rootEl.appendChild(myImage);
+
+  return rootEl;
 }
 
 document.body.appendChild(MyComponent());
