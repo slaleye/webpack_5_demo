@@ -18,7 +18,7 @@ function MyComponent() {
   myImage.classList.add("image");
 
   const btn = document.createElement("button");
-  btn.innerHTML = "Print Email Logs in Console";
+  btn.innerHTML = "Print Email Logs in The Console";
   btn.style.alignSelf="center"
   btn.onclick = printMe;
 
