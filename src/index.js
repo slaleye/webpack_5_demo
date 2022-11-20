@@ -1,7 +1,19 @@
 import _ from "lodash";
-import printMe from "./print";
+import printMe, { getOptionList } from "./print";
+import Dropdown from "./dropdown";
 import "./style.css";
 import WebpackLogo from "./img/logo-on-white-bg.png";
+
+function addCountryToDropdown(rootEl) {
+  const options = getOptionList();
+  console.log({ options });
+  let DrodpownElement = Dropdown(options);
+  if (rootEl.contains(document.querySelector("#dropdown"))) {
+    rootEl.removeChild(document.querySelector("#dropdown"));
+  }
+
+  rootEl.appendChild(DrodpownElement);
+}
 
 function MyComponent() {
   console.log("Hi from MyComponent");
@@ -19,12 +31,18 @@ function MyComponent() {
 
   const btn = document.createElement("button");
   btn.innerHTML = "Print Email Logs in The Console";
-  btn.style.alignSelf="center"
+  btn.style.alignSelf = "center";
   btn.onclick = printMe;
+
+  const btn2 = document.createElement("button");
+  btn2.innerHTML = "Read Option List";
+  btn2.style.alignSelf = "center";
+  btn2.onclick = () => addCountryToDropdown(rootEl);
 
   rootEl.appendChild(textEl);
   rootEl.appendChild(myImage);
   rootEl.appendChild(btn);
+  rootEl.appendChild(btn2);
 
   return rootEl;
 }
