@@ -1,9 +1,12 @@
 /**
  * Drodpown Component
  */
-function Dropdown(optionList = []) {
+ import _ from "lodash";
+
+function dropdown(optionList = []) {
   const selectEl = document.createElement("select");
   selectEl.setAttribute("id", "dropdown");
+  selectEl.classList.add(_.join(["custom","dropdown"],"-"))
   selectEl.style.alignSelf = "center";
 
   if (optionList.length) {
@@ -18,4 +21,4 @@ function Dropdown(optionList = []) {
   return selectEl;
 }
 
-export default Dropdown;
+export default dropdown;

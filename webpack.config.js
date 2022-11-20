@@ -5,6 +5,7 @@ module.exports = {
   entry: {
     index: "./src/index.js",
     print: "./src/print.js",
+    dropdown: "./src/dropdown.js"
   },
   mode: "development",
   devtool: "inline-source-map",

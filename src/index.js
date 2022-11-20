@@ -1,13 +1,13 @@
 import _ from "lodash";
 import printMe, { getOptionList } from "./print";
-import Dropdown from "./dropdown";
+import dropdown from "./dropdown";
 import "./style.css";
 import WebpackLogo from "./img/logo-on-white-bg.png";
 
 function addCountryToDropdown(rootEl) {
   const options = getOptionList();
   console.log({ options });
-  let DrodpownElement = Dropdown(options);
+  let DrodpownElement = dropdown(options);
   if (rootEl.contains(document.querySelector("#dropdown"))) {
     rootEl.removeChild(document.querySelector("#dropdown"));
   }
