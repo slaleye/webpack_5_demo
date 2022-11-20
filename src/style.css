@@ -1,6 +1,14 @@
+@font-face {
+  font-family: "Quicksand";
+  src: url(" ./font/Quicksand-VariableFont_wght.ttf") format("ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+
 #root {
   display: flex;
   flex-direction: column;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .greeting {

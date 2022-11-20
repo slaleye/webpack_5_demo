@@ -1,6 +1,7 @@
 import _ from "lodash";
 import "./style.css";
 import WebpackLogo from "./img/logo-on-white-bg.png";
+import Emails from './data/emails.csv';
 
 function MyComponent() {
   console.log("Hi from MyComponent");
@@ -18,6 +19,8 @@ function MyComponent() {
 
   rootEl.appendChild(textEl);
   rootEl.appendChild(myImage);
+
+  console.log(Emails)
 
   return rootEl;
 }
